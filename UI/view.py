@@ -30,8 +30,13 @@ class View(ft.UserControl):
 
         #ROW with some controls
         # text field for the name
-        self._ddyear = ft.Dropdown(label="Anno")
+        self._ddyear = ft.Dropdown(label="Anno", options=[ft.dropdown.Option("2015"),
+                                                         ft.dropdown.Option("2016"),
+                                                         ft.dropdown.Option("2017"),
+                                                         ft.dropdown.Option("2018")])
         self._ddcolor = ft.Dropdown(label="Colore")
+
+
 
         # button for the "creat graph" reply
         self.btn_graph = ft.ElevatedButton(text="Crea Grafo", on_click=self._controller.handle_graph)
